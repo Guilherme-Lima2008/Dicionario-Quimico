@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <title>Menu principal</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+        }
+
+        header {
+            background: #005a87;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+        }
+
+        nav {
+            background: #003d56;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 10px 15px;
+            display: inline-block;
+        }
+
+        nav a:hover {
+            background: #005a87;
+            border-radius: 5px;
+        }
+
+
+        .main-content {
+            padding: 20px;
+            background: #f4f4f4;
+            min-height: 60px;
+        }
+
+        .main-content h2 {
+            color: #005a87;
+        }
+
+        .main-content p {
+            color: #333;
+            font-size: 1rem;
+        }
+
+        footer {
+            background: #003d56;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            bottom: 0;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 10px 20px;
+            background-color: #333;
+            color: #fff;
+        }
+
+        .search-bar {
+            flex: 1;
+            display: flex;
+            margin: 0 20px;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #555;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .search-bar button:hover {
+            background-color: #777;
+        }
+
+        .utility-buttons {
+            display: flex;
+            gap: 10px;
+        }
+
+        .utility-buttons button {
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            background-color: #444;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .utility-buttons button:hover {
+            background-color: #666;
+        }
+
+        .div-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
+    </style>
+</head>
+
+<body style="background-color: #333;">
+    <header class="header">
+        <h1>Dicionário Químico</h1>
+    </header>
+
+    <nav>
+        <a href="index.html">Início</a>
+        <a href="lista-a-z.html">Elementos</a>
+        <a href="#">Químicos</a>
+        <a href="fale-conosco.html">Fale Conosco</a>
+    </nav>
+
+
+    <div class="main-content">
+        <h2> Bem vindo! </h2>
+        <p> Bem-vindo ao nosso portal de termos químicos.
+            Este site é uma fonte abrangente para a definição e compreensão dos termos essenciais da química.
+            Seja você um acadêmico, profissional ou interessado na área, aqui encontrará informações precisas e claras
+            que facilitarão seu estudo e aplicação da terminologia química.
+            Explore nossos recursos e aprofunde seu conhecimento na linguagem da ciência químicas. </p>
+    </div> <br> <br>
+
+    <div class="div-card">
+        <div class="card" style="width:25rem;">
+            <img src="marie-curie.jpeg" class="card-img-top" style="height:268px;">
+            <div class="card-body">
+                <h5 class="card-title"> Químicos </h5>
+                <p class="card-text"> Conheça mais sobre os Químicos mais importantes da história.</p>
+                <a href="#"
+                    class="btn btn-primary">Clique aqui!</a>
+            </div>
+        </div>
+
+
+
+        <div class="card" style="width:25rem;">
+            <img src="química-logo.jpeg" class="card-img-top" style="height: 268px;">
+            <div class="card-body">
+                <h5 class="card-title">Terminologias de A-Z</h5>
+                <p class="card-text"> Confira as terminologias da Química de maneira organizada.</p>
+                <a href="lista-a-z.html" class="btn btn-primary">Clique aqui!</a>
+            </div>
+        </div>
+
+
+
+        <div class="card" style="width:25rem;">
+            <img src="Artigo-Relacionado.png" class="card-img-top" style="height: 268px;">
+            <div class="card-body">
+                <h5 class="card-title"> Artigo Relacionado </h5>
+                <p class="card-text"> Veja mais sobre terminologias químicas nesse website! </p>
+                <a href="https://www.soquimica.com.br/dicionario" target="_blank" class="btn btn-primary">Clique
+                    aqui!</a>
+            </div>
+        </div>
+    </div>
+
+
+
+    <br> <br>
+    <footer>
+        <p>&copy; 2024 Dicionário Químico. Todos os direitos reservados à Iago e Guilherme.</p>
+    </footer>
+
+
+</body>
+
+</html>
