@@ -94,6 +94,7 @@
     </header>
 
     <nav>
+        <a href="#" id="backButton" style="position: absolute; left: 20px;">Voltar</a>
         <a href="index.html">Início</a>
         <a href="lista-a-z.html">Terminologias</a>
         <a href="#">Químicos</a>
@@ -139,7 +140,15 @@
         com uma ampla gama de reações e aplicações. Compreender suas propriedades e reações é crucial para utilizá-los
         de maneira eficaz e segura em diversas aplicações industriais, laboratoriais e biológicas. </p>
 
-
+        <script>
+            // Obtém o botão
+            const backButton = document.getElementById('backButton');
+    
+            // Função para voltar à página anterior
+            backButton.onclick = function () {
+                window.history.back();
+            };
+        </script>
 
     <br> 
     <footer>

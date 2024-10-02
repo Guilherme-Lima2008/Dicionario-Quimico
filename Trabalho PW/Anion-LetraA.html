@@ -94,6 +94,7 @@
     </header>
 
     <nav>
+        <a href="#" id="backButton" style="position: absolute; left: 20px;">Voltar</a>
         <a href="index.html">Início</a>
         <a href="lista-a-z.html">Terminologias</a>
         <a href="#">Químicos</a>
@@ -136,6 +137,16 @@
     <p style="color:white;">Em resumo, os ânions são componentes químicos essenciais com uma ampla gama de propriedades
         e funções. Eles desempenham papéis críticos em muitos processos químicos e biológicos, tornando seu estudo
         fundamental para a compreensão de reações químicas, aplicações industriais e funções biológicas.</p>
+
+        <script>
+            // Obtém o botão
+            const backButton = document.getElementById('backButton');
+    
+            // Função para voltar à página anterior
+            backButton.onclick = function () {
+                window.history.back();
+            };
+        </script>
 
     <br> 
     <footer>

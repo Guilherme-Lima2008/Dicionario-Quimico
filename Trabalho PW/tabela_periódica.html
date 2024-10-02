@@ -7,6 +7,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" type="image/png" href="./assets/favicon-tabela-periodica.png" />
     <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="botao.css">
+    <link rel="stylesheet" href="popup.css">
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+          <div class="vw-plugin-top-wrapper"></div>
+        </div>
+      </div>
+      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+      <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+      </script>
+
     <title> Tabela Periódica </title>
 
     <style>
@@ -16,7 +30,7 @@
             margin: 0;
             font-family: Arial, sans-serif;
             line-height: 1.6;
-            background-color:rgb(244, 244, 245)
+            background-color: rgb(244, 244, 245)
         }
 
         header {
@@ -149,9 +163,10 @@
     </header>
 
     <nav>
+        <a href="#" id="backButton" style="position: absolute; left: 20px;">Voltar</a>
         <a href="index.html">Início</a>
         <a href="lista-a-z.html">Terminologias</a>
-        <a href="#">Químicos</a>
+        <a href="Químicos.html">Químicos</a>
         <a href="tabela_periódica.html">Tabela Periódica</a>
         <a href="fale-conosco.html">Fale Conosco</a>
     </nav>
@@ -1399,1211 +1414,1237 @@
         </div>
     </div>
 
-    <table class="tabela-mais-informacoes">
-
-        <caption>
-            <h2>Tabela com mais informações dos elementos</h2>
-        </caption>
-
-        <thead>
-            <tr class="cinza-claro">
-                <th>Nº Atômico</th>
-                <th>Símbolo Químico</th>
-                <th>Nome</th>
-                <th>Massa Atômica</th>
-                <th>Tipo</th>
-                <th>Ponto de Fusão</th>
-                <th>Ponto de Ebulição</th>
-            </tr>
-        </thead>
-
-        <tbody>
-            <tr id="H">
-                <td class="laranja">1</td>
-                <td>H</td>
-                <td>Hidrogênio</td>
-                <td>1,008</td>
-                <td>Não metais diatômicos</td>
-                <td>-259,1°C</td>
-                <td>-252,9°C</td>
-            </tr>
-
-            <tr id="He">
-                <td class="rosa">2</td>
-                <td>He</td>
-                <td>Hélio</td>
-                <td>4,0026</td>
-                <td>Gases nobres</td>
-                <td>Desconhecido</td>
-                <td>-269°C</td>
-            </tr>
-
-            <tr id="Li">
-                <td class="vermelho">3</td>
-                <td>Li</td>
-                <td>Lítio</td>
-                <td>6,941</td>
-                <td>Metais alcalinos</td>
-                <td>180,54°C</td>
-                <td>1342°C</td>
-            </tr>
-
-            <tr id="Be">
-                <td class="bege">4</td>
-                <td>Be</td>
-                <td>Berílio</td>
-                <td>9,0122</td>
-                <td>Metais alcalinoterrosos</td>
-                <td>1287°C</td>
-                <td>2470°C</td>
-            </tr>
-
-            <tr id="B">
-                <td class="amarelo">5</td>
-                <td>B</td>
-                <td>Boro</td>
-                <td>10,81</td>
-                <td>Semimetais</td>
-                <td>2075°C</td>
-                <td>4000°C</td>
-            </tr>
-
-            <tr id="C">
-                <td class="verde-escuro">6</td>
-                <td>C</td>
-                <td>Carbono</td>
-                <td>12,011</td>
-                <td>Não metais poliatômicos</td>
-                <td>3642°C</td>
-                <td>3642°C</td>
-            </tr>
-
-            <tr id="N">
-                <td class="laranja">7</td>
-                <td>N</td>
-                <td>Nitrogênio</td>
-                <td>14,007</td>
-                <td>Não metais diatômicos</td>
-                <td>-210,1°C</td>
-                <td>-195,8°C</td>
-            </tr>
-
-            <tr id="O">
-                <td class="laranja">8</td>
-                <td>O</td>
-                <td>Oxigênio</td>
-                <td>15,999</td>
-                <td>Não metais diatômicos</td>
-                <td>-218°C</td>
-                <td>-183°C</td>
-            </tr>
-
-            <tr id="F">
-                <td class="laranja">9</td>
-                <td>F</td>
-                <td>Flúor</td>
-                <td>18,998</td>
-                <td>Não metais diatômicos</td>
-                <td>220°C</td>
-                <td>-188,1°C</td>
-            </tr>
-
-            <tr id="Ne">
-                <td class="rosa">10</td>
-                <td>Ne</td>
-                <td>Neônio</td>
-                <td>20,18</td>
-                <td>Gases nobres</td>
-                <td>-284,6°C</td>
-                <td>-246,1°C</td>
-            </tr>
-
-            <tr id="Na">
-                <td class="vermelho">11</td>
-                <td>Na</td>
-                <td>Sódio</td>
-                <td>22990</td>
-                <td>Metais alcalinos</td>
-                <td>97,720°C</td>
-                <td>882,9°C</td>
-            </tr>
-
-            <tr id="Mg">
-                <td class="bege">12</td>
-                <td>Mg</td>
-                <td>Magnésio</td>
-                <td>24,305</td>
-                <td>Metais alcalinoterrosos</td>
-                <td>650°C</td>
-                <td>1090°C</td>
-            </tr>
-
-            <tr id="Al">
-                <td class="roxo">13</td>
-                <td>Al</td>
-                <td>Alumínio</td>
-                <td>26,982</td>
-                <td>Metais pós-transição</td>
-                <td>660,32°C</td>
-                <td>2519°C</td>
-            </tr>
-
-            <tr id="Si">
-                <td class="amarelo">14</td>
-                <td>Si</td>
-                <td>Silício</td>
-                <td>28,085</td>
-                <td>Semimetais</td>
-                <td>1414°C</td>
-                <td>2900°C</td>
-            </tr>
-
-            <tr id="P">
-                <td class="verde-escuro">15</td>
-                <td>P</td>
-                <td>Fósforo</td>
-                <td>30,974</td>
-                <td>Não metais poliatômicos</td>
-                <td>44,15°C</td>
-                <td>280,5°C</td>
-            </tr>
-
-            <tr id="S">
-                <td class="verde-escuro">16</td>
-                <td>S</td>
-                <td>Enxofre</td>
-                <td>32,06</td>
-                <td>Não metais poliatômicos</td>
-                <td>115,21°C</td>
-                <td>444,72°C</td>
-            </tr>
-
-            <tr id="Cl">
-                <td class="laranja">17</td>
-                <td>Cl</td>
-                <td>Cloro</td>
-                <td>35,45</td>
-                <td>Não metais diatômicos</td>
-                <td>-101,5°C</td>
-                <td>-34,04°C</td>
-            </tr>
-
-            <tr id="Ar">
-                <td class="rosa">18</td>
-                <td>Ar</td>
-                <td>Argônio</td>
-                <td>39,948</td>
-                <td>Gases nobres</td>
-                <td>-189°C</td>
-                <td>-1860°C</td>
-            </tr>
-
-            <tr id="K">
-                <td class="vermelho">19</td>
-                <td>K</td>
-                <td>Potássio</td>
-                <td>39,098</td>
-                <td>Metais alcalinos</td>
-                <td>63°C</td>
-                <td>758,9°C</td>
-            </tr>
-
-            <tr id="Ca">
-                <td class="bege">20</td>
-                <td>Ca</td>
-                <td>Cálcio</td>
-                <td>40,078</td>
-                <td>Metais alcalinoterrosos</td>
-                <td>841,9°C</td>
-                <td>1484°C</td>
-            </tr>
-
-            <tr id="Sc">
-                <td class="verde-claro">21</td>
-                <td>Sc</td>
-                <td>Escândio</td>
-                <td>44,956</td>
-                <td>Metais de transição</td>
-                <td>1541°C</td>
-                <td>2830°C</td>
-            </tr>
-
-            <tr id="Ti">
-                <td class="verde-claro">22</td>
-                <td>Ti</td>
-                <td>Titânio</td>
-                <td>47,867</td>
-                <td>Metais de transição</td>
-                <td>1668°C</td>
-                <td>3287°C</td>
-            </tr>
-
-            <tr id="V">
-                <td class="verde-claro">23</td>
-                <td>V</td>
-                <td>Vanádio</td>
-                <td>50,942</td>
-                <td>Metais de transição</td>
-                <td>1910°C</td>
-                <td>3407°C</td>
-            </tr>
-
-            <tr id="Cr">
-                <td class="verde-claro">24</td>
-                <td>Cr</td>
-                <td>Crômio</td>
-                <td>51,996</td>
-                <td>Metais de transição</td>
-                <td>1907°C</td>
-                <td>2671°C</td>
-            </tr>
-
-            <tr id="Mn">
-                <td class="verde-claro">25</td>
-                <td>Mn</td>
-                <td>Manganês</td>
-                <td>54,938</td>
-                <td>Metais de transição</td>
-                <td>1246°C</td>
-                <td>2061°C</td>
-            </tr>
-
-            <tr id="Fe">
-                <td class="verde-claro">26</td>
-                <td>Fe</td>
-                <td>Ferro</td>
-                <td>55,845</td>
-                <td>Metais de transição</td>
-                <td>1538°C</td>
-                <td>2861°C</td>
-            </tr>
-
-            <tr id="Co">
-                <td class="verde-claro">27</td>
-                <td>Co</td>
-                <td>Cobalto</td>
-                <td>58,933</td>
-                <td>Metais de transição</td>
-                <td>1495°C</td>
-                <td>2900°C</td>
-            </tr>
-
-            <tr id="Ni">
-                <td class="verde-claro">28</td>
-                <td>Ni</td>
-                <td>Níquel</td>
-                <td>58,693</td>
-                <td>Metais de transição</td>
-                <td>1455°C</td>
-                <td>2913°C</td>
-            </tr>
-
-            <tr id="Cu">
-                <td class="verde-claro">29</td>
-                <td>Cu</td>
-                <td>Cobre</td>
-                <td>63,546</td>
-                <td>Metais de transição</td>
-                <td>1084,62°C</td>
-                <td>2562°C</td>
-            </tr>
-
-            <tr id="Zn">
-                <td class="verde-claro">30</td>
-                <td>Zn</td>
-                <td>Zinco</td>
-                <td>65,38</td>
-                <td>Metais de transição</td>
-                <td>419,53°C</td>
-                <td>906,9°C</td>
-            </tr>
-
-            <tr id="Ga">
-                <td class="roxo">31</td>
-                <td>Ga</td>
-                <td>Gálio</td>
-                <td>69,723</td>
-                <td>Metais pós-transição</td>
-                <td>29,76°C</td>
-                <td>2204°C</td>
-            </tr>
-
-            <tr id="Ge">
-                <td class="amarelo">32</td>
-                <td>Ge</td>
-                <td>Germânio</td>
-                <td>72,63</td>
-                <td>Semimetais</td>
-                <td>938,25°C</td>
-                <td>2028°C</td>
-            </tr>
-
-            <tr id="As">
-                <td class="amarelo">33</td>
-                <td>As</td>
-                <td>Arsênio</td>
-                <td>74,922</td>
-                <td>Semimetais</td>
-                <td>816,9°C</td>
-                <td>614°C</td>
-            </tr>
-
-            <tr id="Se">
-                <td class="verde-escuro">34</td>
-                <td>Se</td>
-                <td>Selênio</td>
-                <td>78,971</td>
-                <td>Não metais poliatômicos</td>
-                <td>221°C</td>
-                <td>685°C</td>
-            </tr>
-
-            <tr id="Br">
-                <td class="laranja">35</td>
-                <td>Br</td>
-                <td>Bromo</td>
-                <td>79,904</td>
-                <td>Não metais diatômicos</td>
-                <td>-7,35°C</td>
-                <td>58,9°C</td>
-            </tr>
-
-            <tr id="Kr">
-                <td class="rosa">36</td>
-                <td>Kr</td>
-                <td>Criptônio</td>
-                <td>83,798</td>
-                <td>Gases nobres</td>
-                <td>-157,36°C</td>
-                <td>153,22°C</td>
-            </tr>
-
-            <tr id="Rb">
-                <td class="vermelho">37</td>
-                <td>Rb</td>
-                <td>Rubídio</td>
-                <td>85,468</td>
-                <td>Metais alcalinos</td>
-                <td>39,310°C</td>
-                <td>688°C</td>
-            </tr>
-
-            <tr id="Sr">
-                <td class="bege">38</td>
-                <td>Sr</td>
-                <td>Estrôncio</td>
-                <td>87,62</td>
-                <td>Metais alcalinoterrosos</td>
-                <td>776,9°C</td>
-                <td>1382°C</td>
-            </tr>
-
-            <tr id="Y">
-                <td class="verde-claro">39</td>
-                <td>Y</td>
-                <td>Ítrio</td>
-                <td>88,906</td>
-                <td>Metais de transição</td>
-                <td>1526°C</td>
-                <td>3345°C</td>
-            </tr>
-
-            <tr id="Zr">
-                <td class="verde-claro">40</td>
-                <td>Zr</td>
-                <td>Zircônio</td>
-                <td>91,224</td>
-                <td>Metais de transição</td>
-                <td>1855°C</td>
-                <td>4409°C</td>
-            </tr>
-
-            <tr id="Nb">
-                <td class="verde-claro">41</td>
-                <td>Nb</td>
-                <td>Nióbio</td>
-                <td>92,906</td>
-                <td>Metais de transição</td>
-                <td>2477°C</td>
-                <td>4927°C</td>
-            </tr>
-
-            <tr id="Mo">
-                <td class="verde-claro">42</td>
-                <td>Mo</td>
-                <td>Molibdênio</td>
-                <td>95,95</td>
-                <td>Metais de transição</td>
-                <td>2623°C</td>
-                <td>4639°C</td>
-            </tr>
-
-            <tr id="Tc">
-                <td class="verde-claro">43</td>
-                <td>Tc</td>
-                <td>Tecnécio</td>
-                <td>[98]</td>
-                <td>Metais de transição</td>
-                <td>2204°C</td>
-                <td>4265°C</td>
-            </tr>
-
-            <tr id="Ru">
-                <td class="verde-claro">44</td>
-                <td>Ru</td>
-                <td>Rutênio</td>
-                <td>101,07</td>
-                <td>Metais de transição</td>
-                <td>2334°C</td>
-                <td>4150°C</td>
-            </tr>
-
-            <tr id="Rh">
-                <td class="verde-claro">45</td>
-                <td>Rh</td>
-                <td>Ródio</td>
-                <td>102,905</td>
-                <td>Metais de transição</td>
-                <td>1964°C</td>
-                <td>3695°C</td>
-            </tr>
-
-            <tr id="Pd">
-                <td class="verde-claro">46</td>
-                <td>Pd</td>
-                <td>Paládio</td>
-                <td>106,42</td>
-                <td>Metais de transição</td>
-                <td>1554,90°C</td>
-                <td>2963°C</td>
-            </tr>
-
-            <tr id="Ag">
-                <td class="verde-claro">47</td>
-                <td>Ag</td>
-                <td>Prata</td>
-                <td>107,87</td>
-                <td>Metais de transição</td>
-                <td>961,78°C</td>
-                <td>2162°C</td>
-            </tr>
-
-            <tr id="Cd">
-                <td class="verde-claro">48</td>
-                <td>Cd</td>
-                <td>Cádmio</td>
-                <td>112,41</td>
-                <td>Metais de transição</td>
-                <td>321,07°C</td>
-                <td>766,9°C</td>
-            </tr>
-
-            <tr id="In">
-                <td class="roxo">49</td>
-                <td>In</td>
-                <td>Índio</td>
-                <td>114,82</td>
-                <td>Metais pós-transição</td>
-                <td>156,6°C</td>
-                <td>2072°C</td>
-            </tr>
-
-            <tr id="Sn">
-                <td class="roxo">50</td>
-                <td>Sn</td>
-                <td>Estanho</td>
-                <td>118,71</td>
-                <td>Metais pós-transição</td>
-                <td>231,93°C</td>
-                <td>2602°C</td>
-            </tr>
-
-            <tr id="Sb">
-                <td class="amarelo">51</td>
-                <td>Sb</td>
-                <td>Antimônio</td>
-                <td>121,79</td>
-                <td>Semimetais</td>
-                <td>630,63°C5</td>
-                <td>1587°C</td>
-            </tr>
-
-            <tr id="Te">
-                <td class="amarelo">52</td>
-                <td>Te</td>
-                <td>Telúrio</td>
-                <td>127,6</td>
-                <td>Semimetais</td>
-                <td>449,51°C</td>
-                <td>987,9°C</td>
-            </tr>
-
-            <tr id="I">
-                <td class="laranja">53</td>
-                <td>I</td>
-                <td>Iodo</td>
-                <td>126,9</td>
-                <td>Não metais diatômicos</td>
-                <td>113,7°C</td>
-                <td>184,3°C</td>
-            </tr>
-
-            <tr id="Xe">
-                <td class="rosa">54</td>
-                <td>Xe</td>
-                <td>Xenônio</td>
-                <td>131,29</td>
-                <td>Gases nobres</td>
-                <td>-111,8°C</td>
-                <td>-108°C</td>
-            </tr>
-
-            <tr id="Cs">
-                <td class="vermelho">55</td>
-                <td>Cs</td>
-                <td>Césio</td>
-                <td>132,905</td>
-                <td>Metais alcalinos</td>
-                <td>28,440°C</td>
-                <td>671°C</td>
-            </tr>
-
-            <tr id="Ba">
-                <td class="bege">56</td>
-                <td>Ba</td>
-                <td>Bário</td>
-                <td>137,33</td>
-                <td>Metais alcalinoterrosos</td>
-                <td>730°C</td>
-                <td>1870°C</td>
-            </tr>
-
-            <tr id="La">
-                <td class="azul-escuro">57</td>
-                <td>La</td>
-                <td>Lantânio</td>
-                <td>138,91</td>
-                <td>Lantanídeos</td>
-                <td>919,9°C</td>
-                <td>3464°C</td>
-            </tr>
-
-            <tr id="Ce">
-                <td class="azul-escuro">58</td>
-                <td>Ce</td>
-                <td>Cério</td>
-                <td>140,12</td>
-                <td>Lantanídeos</td>
-                <td>797,9°C</td>
-                <td>3360°C</td>
-            </tr>
-
-            <tr id="Pr">
-                <td class="azul-escuro">59</td>
-                <td>Pr</td>
-                <td>Praseodímio</td>
-                <td>140,91</td>
-                <td>Lantanídeos</td>
-                <td>930,9°C</td>
-                <td>3290°C</td>
-            </tr>
-
-            <tr id="Nd">
-                <td class="azul-escuro">60</td>
-                <td>Nd</td>
-                <td>Neodímio</td>
-                <td>144,24</td>
-                <td>Lantanídeos</td>
-                <td>1021°C</td>
-                <td>3100°C</td>
-            </tr>
-
-            <tr id="Pm">
-                <td class="azul-escuro">61</td>
-                <td>Pm</td>
-                <td>Promécio</td>
-                <td>[145]</td>
-                <td>Lantanídeos</td>
-                <td>1100°C</td>
-                <td>3000°C</td>
-            </tr>
-
-            <tr id="Sm">
-                <td class="azul-escuro">62</td>
-                <td>Sm</td>
-                <td>Samário</td>
-                <td>150,36</td>
-                <td>Lantanídeos</td>
-                <td>1072°C</td>
-                <td>1803°C</td>
-            </tr>
-
-            <tr id="Eu">
-                <td class="azul-escuro">63</td>
-                <td>Eu</td>
-                <td>Európio</td>
-                <td>151,96</td>
-                <td>Lantanídeos</td>
-                <td>821,9°C</td>
-                <td>1500°C</td>
-            </tr>
-
-            <tr id="Gd">
-                <td class="azul-escuro">64</td>
-                <td>Gd</td>
-                <td>Gadolínio</td>
-                <td>157,25</td>
-                <td>Lantanídeos</td>
-                <td>1313°C</td>
-                <td>3250°C</td>
-            </tr>
-
-            <tr id="Tb">
-                <td class="azul-escuro">65</td>
-                <td>Tb</td>
-                <td>Térbio</td>
-                <td>158,93</td>
-                <td>Lantanídeos</td>
-                <td>1356°C</td>
-                <td>3230°C</td>
-            </tr>
-
-            <tr id="Dy">
-                <td class="azul-escuro">66</td>
-                <td>Dy</td>
-                <td>Disprósio</td>
-                <td>162,5</td>
-                <td>Lantanídeos</td>
-                <td>1412°C</td>
-                <td>2567°C</td>
-            </tr>
-
-            <tr id="Ho">
-                <td class="azul-escuro">67</td>
-                <td>Ho</td>
-                <td>Hólmio</td>
-                <td>164,93</td>
-                <td>Lantanídeos</td>
-                <td>1474°C</td>
-                <td>2700°C</td>
-            </tr>
-
-            <tr id="Er">
-                <td class="azul-escuro">68</td>
-                <td>Er</td>
-                <td>Érbio</td>
-                <td>167,26</td>
-                <td>Lantanídeos</td>
-                <td>1545°C</td>
-                <td>1950°C</td>
-            </tr>
-
-            <tr id="Tm">
-                <td class="azul-escuro">69</td>
-                <td>Tm</td>
-                <td>Túlio</td>
-                <td>168,93</td>
-                <td>Lantanídeos</td>
-                <td>1545°C</td>
-                <td>1545°C</td>
-            </tr>
-
-            <tr id="Yb">
-                <td class="azul-escuro">70</td>
-                <td>Yb</td>
-                <td>Itérbio</td>
-                <td>173,05</td>
-                <td>Lantanídeos</td>
-                <td>818,9°C</td>
-                <td>1196°C</td>
-            </tr>
-
-            <tr id="Lu">
-                <td class="azul-escuro">71</td>
-                <td>Lu</td>
-                <td>Lutécio</td>
-                <td>174,97</td>
-                <td>Lantanídeos</td>
-                <td>1663°C</td>
-                <td>3402°C</td>
-            </tr>
-
-            <tr id="Hf">
-                <td class="verde-claro">72</td>
-                <td>Hf</td>
-                <td>Háfnio</td>
-                <td>178,49</td>
-                <td>Metais de transição</td>
-                <td>2233°C</td>
-                <td>4603°C</td>
-            </tr>
-
-            <tr id="Ta">
-                <td class="verde-claro">73</td>
-                <td>Ta</td>
-                <td>Tântalo</td>
-                <td>180,948</td>
-                <td>Metais de transição</td>
-                <td>3422°C</td>
-                <td>5555°C</td>
-            </tr>
-
-            <tr id="W">
-                <td class="verde-claro">74</td>
-                <td>W</td>
-                <td>Tungstênio</td>
-                <td>183,84</td>
-                <td>Metais de transição</td>
-                <td>3422°C</td>
-                <td>5555°C</td>
-            </tr>
-
-            <tr id="Re">
-                <td class="azul-claro">75</td>
-                <td>Re</td>
-                <td>Rênio</td>
-                <td>186,207</td>
-                <td>Metais de transição</td>
-                <td>3186°C</td>
-                <td>5596°C</td>
-            </tr>
-
-            <tr id="Os">
-                <td class="verde-claro">76</td>
-                <td>Os</td>
-                <td>Ósmio</td>
-                <td>190,23</td>
-                <td>Metais de transição</td>
-                <td>3033°C</td>
-                <td>5012°C</td>
-            </tr>
-
-            <tr id="Ir">
-                <td class="verde-claro">77</td>
-                <td>Ir</td>
-                <td>Irídio</td>
-                <td>192,217</td>
-                <td>Metais de transição</td>
-                <td>2466°C</td>
-                <td>4428°C</td>
-            </tr>
-
-            <tr id="Pt">
-                <td class="verde-claro">78</td>
-                <td>Pt</td>
-                <td>Platina</td>
-                <td>195,084</td>
-                <td>Metais de transição</td>
-                <td>1768,3°C</td>
-                <td>3825°C</td>
-            </tr>
-
-            <tr id="Au">
-                <td class="verde-claro">79</td>
-                <td>Au</td>
-                <td>Ouro</td>
-                <td>196,97</td>
-                <td>Metais de transição</td>
-                <td>1064,18°C</td>
-                <td>2856°C</td>
-            </tr>
-
-            <tr id="Hg">
-                <td class="verde-claro">80</td>
-                <td>Hg</td>
-                <td>Mercúrio</td>
-                <td>200,59</td>
-                <td>Metais de transição</td>
-                <td>-38,83°C</td>
-                <td>356,73°C</td>
-            </tr>
-
-            <tr id="Tl">
-                <td class="roxo">81</td>
-                <td>Tl</td>
-                <td>Tálio</td>
-                <td>204,38</td>
-                <td>Metais pós-transição</td>
-                <td>304°C</td>
-                <td>1473°C</td>
-            </tr>
-
-            <tr id="Pb">
-                <td class="roxo">82</td>
-                <td>Pb</td>
-                <td>Chumbo</td>
-                <td>207,2</td>
-                <td>Metais pós-transição</td>
-                <td>327,46°C</td>
-                <td>1749°C</td>
-            </tr>
-
-            <tr id="Bi">
-                <td class="roxo">83</td>
-                <td>Bi</td>
-                <td>Bismuto</td>
-                <td>208,98</td>
-                <td>Metais pós-transição</td>
-                <td>271,3°C</td>
-                <td>1564°C</td>
-            </tr>
-
-            <tr id="Po">
-                <td class="roxo">84</td>
-                <td>Po</td>
-                <td>Polônio</td>
-                <td>[209]</td>
-                <td>Metais pós-transição</td>
-                <td>255°C</td>
-                <td>961,90°C</td>
-            </tr>
-
-            <tr id="At">
-                <td class="amarelo">85</td>
-                <td>At</td>
-                <td>Ástato</td>
-                <td>[210]</td>
-                <td>Semimetais</td>
-                <td>302°C</td>
-                <td>350°C</td>
-            </tr>
-
-            <tr id="Rn">
-                <td class="rosa">86</td>
-                <td>Rn</td>
-                <td>Radônio</td>
-                <td>[222]</td>
-                <td>Gases nobres</td>
-                <td>-71,1°C</td>
-                <td>-61,85°C</td>
-            </tr>
-
-            <tr id="Fr">
-                <td class="vermelho">87</td>
-                <td>Fr</td>
-                <td>Frâncio</td>
-                <td>[223]</td>
-                <td>Metais alcalinos</td>
-                <td>20,9°C</td>
-                <td>650°C</td>
-            </tr>
-
-            <tr id="Ra">
-                <td class="bege">88</td>
-                <td>Ra</td>
-                <td>Rádio</td>
-                <td>[226]</td>
-                <td>Metais alcalinoterrosos</td>
-                <td>700°C</td>
-                <td>1737°C</td>
-            </tr>
-
-            <tr id="Ac">
-                <td class="azul-claro">89</td>
-                <td>Ac</td>
-                <td>Actínio</td>
-                <td>[227]</td>
-                <td>Actinídeos</td>
-                <td>1050°C</td>
-                <td>3200°C</td>
-            </tr>
-
-            <tr id="Th">
-                <td class="azul-claro">90</td>
-                <td>Th</td>
-                <td>Tório</td>
-                <td>232,04</td>
-                <td>Actinídeos</td>
-                <td>1750°C</td>
-                <td>4820°C</td>
-            </tr>
-
-            <tr id="Pa">
-                <td class="azul-claro">91</td>
-                <td>Pa</td>
-                <td>Protactínio</td>
-                <td>231,04</td>
-                <td>Actinídeos</td>
-                <td>1572°C</td>
-                <td>4000°C</td>
-            </tr>
-
-            <tr id="U">
-                <td class="azul-claro">92</td>
-                <td>U</td>
-                <td>Urânio</td>
-                <td>238,03</td>
-                <td>Actinídeos</td>
-                <td>1135°C</td>
-                <td>3900°C</td>
-            </tr>
-
-            <tr id="Np">
-                <td class="azul-claro">93</td>
-                <td>Np</td>
-                <td>Netúnio</td>
-                <td>[237]</td>
-                <td>Actinídeos</td>
-                <td>644°C</td>
-                <td>4000°C</td>
-            </tr>
-
-            <tr id="Pu">
-                <td class="azul-claro">94</td>
-                <td>Pu</td>
-                <td>Plutônio</td>
-                <td>[244]</td>
-                <td>Actinídeos</td>
-                <td>640°C</td>
-                <td>3230°C</td>
-            </tr>
-
-            <tr id="Am">
-                <td class="azul-claro">95</td>
-                <td>Am</td>
-                <td>Amerício</td>
-                <td>[243]</td>
-                <td>Actinídeos</td>
-                <td>1176°C</td>
-                <td>2011°C</td>
-            </tr>
-
-            <tr id="Cm">
-                <td class="azul-claro">96</td>
-                <td>Cm</td>
-                <td>Cúrio</td>
-                <td>[247]</td>
-                <td>Actinídeos</td>
-                <td>1345°C</td>
-                <td>3140°C</td>
-            </tr>
-
-            <tr id="Bk">
-                <td class="azul-claro">97</td>
-                <td>Bk</td>
-                <td>Berquélio</td>
-                <td>[247]</td>
-                <td>Actinídeos</td>
-                <td>1050°C</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Cf">
-                <td class="azul-claro">98</td>
-                <td>Cf</td>
-                <td>Califórnio</td>
-                <td>[251]</td>
-                <td>Actinídeos</td>
-                <td>899,9°C</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Es">
-                <td class="azul-claro">99</td>
-                <td>Es</td>
-                <td>Einstênio</td>
-                <td>[252]</td>
-                <td>Actinídeos</td>
-                <td>859,9°C</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Fm">
-                <td class="azul-claro">100</td>
-                <td>Fm</td>
-                <td>Férmio</td>
-                <td>[257]</td>
-                <td>Actinídeos</td>
-                <td>1500°C</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Md">
-                <td class="azul-claro">101</td>
-                <td>Md</td>
-                <td>Mendelévio</td>
-                <td>[258]</td>
-                <td>Actinídeos</td>
-                <td>830°C</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="No">
-                <td class="azul-claro">102</td>
-                <td>No</td>
-                <td>Nobélio</td>
-                <td>[259]</td>
-                <td>Actinídeos</td>
-                <td>830°C</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Lr">
-                <td class="azul-claro">103</td>
-                <td>Lr</td>
-                <td>Laurêncio</td>
-                <td>[262]</td>
-                <td>Actinídeos</td>
-                <td>1600°C</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Rf">
-                <td class="verde-claro">104</td>
-                <td>Rf</td>
-                <td>Rutherfórdio</td>
-                <td>[267]</td>
-                <td>Metais de transição</td>
-                <td>1826,85°C</td>
-                <td>5526,85°C</td>
-            </tr>
-
-            <tr id="Db">
-                <td class="verde-claro">105</td>
-                <td>Db</td>
-                <td>Dúbnio</td>
-                <td>[268]</td>
-                <td>Metais de transição</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Sg">
-                <td class="verde-claro">106</td>
-                <td>Sg</td>
-                <td>Seabórgio</td>
-                <td>[269]</td>
-                <td>Metais de transição</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Bh">
-                <td class="verde-claro">107</td>
-                <td></a>Bh</td>
-                <td>Bóhrio</td>
-                <td>[270]</td>
-                <td>Metais de transição</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Hs">
-                <td class="verde-claro">108</td>
-                <td>Hs</td>
-                <td>Hássio</td>
-                <td>[277]</td>
-                <td>Metais de transição</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Mt">
-                <td class="cinza">109</td>
-                <td>Mt</td>
-                <td>Meitnério</td>
-                <td>[278]</td>
-                <td>Propriedades desconhecidas</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Ds">
-                <td class="cinza">110</td>
-                <td>Ds</td>
-                <td>Darmstádtio</td>
-                <td>[281]</td>
-                <td>Propriedades desconhecidas</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Rg">
-                <td class="cinza">111</td>
-                <td>Rg</td>
-                <td>Roentgênio</td>
-                <td>[281]</td>
-                <td>Propriedades desconhecidas</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Cn">
-                <td class="verde-claro">112</td>
-                <td>Cn</td>
-                <td>Copemício</td>
-                <td>[285]</td>
-                <td>Metais de transição</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Nh">
-                <td class="cinza">113</td>
-                <td>Nh</td>
-                <td>Nihônio</td>
-                <td>[286]</td>
-                <td>Propriedades desconhecidas</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Fl">
-                <td class="cinza">114</td>
-                <td>Fl</td>
-                <td>Fleróvio</td>
-                <td>[289]</td>
-                <td>Propriedades desconhecidas</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Mc">
-                <td class="cinza">115</td>
-                <td>Mc</td>
-                <td>Moscóvio</td>
-                <td>[289]</td>
-                <td>Propriedades desconhecidas</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Lv">
-                <td class="cinza">116</td>
-                <td>Lv</td>
-                <td>Livermório</td>
-                <td>[293]</td>
-                <td>Propriedades desconhecidas</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Ts">
-                <td class="cinza">117</td>
-                <td>Ts</td>
-                <td>Tenesso</td>
-                <td>[294]</td>
-                <td>Propriedades desconhecidas</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-
-            <tr id="Og">
-                <td class="cinza">118</td>
-                <td>Og</td>
-                <td>Oganessônio</td>
-                <td>[294]</td>
-                <td>Propriedades desconhecidas</td>
-                <td>Desconhecido</td>
-                <td>Desconhecido</td>
-            </tr>
-        </tbody>
-    </table>
+    <div>
+        <table class="tabela-mais-informacoes">
+
+                <caption>
+                    <h2>Tabela com mais informações dos elementos</h2>
+                </caption>
+
+                <button id="backToTopBtn">⬆
+                    
+                <thead>
+                    <tr class="cinza-claro">
+                        <th>Nº Atômico</th>
+                        <th>Símbolo Químico</th>
+                        <th>Nome</th>
+                        <th>Massa Atômica</th>
+                        <th>Tipo</th>
+                        <th>Ponto de Fusão</th>
+                        <th>Ponto de Ebulição</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr id="H">
+                        <td class="laranja" onclick="openPopup('info1')" class="popup-cell">1</td>
+                        <td>H</td>
+                        <td>Hidrogênio</td>
+                        <td>1,008</td>
+                        <td>Não metais diatômicos</td>
+                        <td>-259,1°C</td>
+                        <td>-252,9°C</td>
+                    </tr>
+
+                    <tr id="He">
+                        <td class="rosa" onclick="openPopup('info2')" class="popup-cell">2</td>
+                        <td>He</td>
+                        <td>Hélio</td>
+                        <td>4,0026</td>
+                        <td>Gases nobres</td>
+                        <td>Desconhecido</td>
+                        <td>-269°C</td>
+                    </tr>
+
+                    <tr id="Li">
+                        <td class="vermelho">3</td>
+                        <td>Li</td>
+                        <td>Lítio</td>
+                        <td>6,941</td>
+                        <td>Metais alcalinos</td>
+                        <td>180,54°C</td>
+                        <td>1342°C</td>
+                    </tr>
+
+                    <tr id="Be">
+                        <td class="bege">4</td>
+                        <td>Be</td>
+                        <td>Berílio</td>
+                        <td>9,0122</td>
+                        <td>Metais alcalinoterrosos</td>
+                        <td>1287°C</td>
+                        <td>2470°C</td>
+                    </tr>
+
+                    <tr id="B">
+                        <td class="amarelo">5</td>
+                        <td>B</td>
+                        <td>Boro</td>
+                        <td>10,81</td>
+                        <td>Semimetais</td>
+                        <td>2075°C</td>
+                        <td>4000°C</td>
+                    </tr>
+
+                    <tr id="C">
+                        <td class="verde-escuro">6</td>
+                        <td>C</td>
+                        <td>Carbono</td>
+                        <td>12,011</td>
+                        <td>Não metais poliatômicos</td>
+                        <td>3642°C</td>
+                        <td>3642°C</td>
+                    </tr>
+
+                    <tr id="N">
+                        <td class="laranja">7</td>
+                        <td>N</td>
+                        <td>Nitrogênio</td>
+                        <td>14,007</td>
+                        <td>Não metais diatômicos</td>
+                        <td>-210,1°C</td>
+                        <td>-195,8°C</td>
+                    </tr>
+
+                    <tr id="O">
+                        <td class="laranja">8</td>
+                        <td>O</td>
+                        <td>Oxigênio</td>
+                        <td>15,999</td>
+                        <td>Não metais diatômicos</td>
+                        <td>-218°C</td>
+                        <td>-183°C</td>
+                    </tr>
+
+                    <tr id="F">
+                        <td class="laranja">9</td>
+                        <td>F</td>
+                        <td>Flúor</td>
+                        <td>18,998</td>
+                        <td>Não metais diatômicos</td>
+                        <td>220°C</td>
+                        <td>-188,1°C</td>
+                    </tr>
+
+                    <tr id="Ne">
+                        <td class="rosa">10</td>
+                        <td>Ne</td>
+                        <td>Neônio</td>
+                        <td>20,18</td>
+                        <td>Gases nobres</td>
+                        <td>-284,6°C</td>
+                        <td>-246,1°C</td>
+                    </tr>
+
+                    <tr id="Na">
+                        <td class="vermelho">11</td>
+                        <td>Na</td>
+                        <td>Sódio</td>
+                        <td>22990</td>
+                        <td>Metais alcalinos</td>
+                        <td>97,720°C</td>
+                        <td>882,9°C</td>
+                    </tr>
+
+                    <tr id="Mg">
+                        <td class="bege">12</td>
+                        <td>Mg</td>
+                        <td>Magnésio</td>
+                        <td>24,305</td>
+                        <td>Metais alcalinoterrosos</td>
+                        <td>650°C</td>
+                        <td>1090°C</td>
+                    </tr>
+
+                    <tr id="Al">
+                        <td class="roxo">13</td>
+                        <td>Al</td>
+                        <td>Alumínio</td>
+                        <td>26,982</td>
+                        <td>Metais pós-transição</td>
+                        <td>660,32°C</td>
+                        <td>2519°C</td>
+                    </tr>
+
+                    <tr id="Si">
+                        <td class="amarelo">14</td>
+                        <td>Si</td>
+                        <td>Silício</td>
+                        <td>28,085</td>
+                        <td>Semimetais</td>
+                        <td>1414°C</td>
+                        <td>2900°C</td>
+                    </tr>
+
+                    <tr id="P">
+                        <td class="verde-escuro">15</td>
+                        <td>P</td>
+                        <td>Fósforo</td>
+                        <td>30,974</td>
+                        <td>Não metais poliatômicos</td>
+                        <td>44,15°C</td>
+                        <td>280,5°C</td>
+                    </tr>
+
+                    <tr id="S">
+                        <td class="verde-escuro">16</td>
+                        <td>S</td>
+                        <td>Enxofre</td>
+                        <td>32,06</td>
+                        <td>Não metais poliatômicos</td>
+                        <td>115,21°C</td>
+                        <td>444,72°C</td>
+                    </tr>
+
+                    <tr id="Cl">
+                        <td class="laranja">17</td>
+                        <td>Cl</td>
+                        <td>Cloro</td>
+                        <td>35,45</td>
+                        <td>Não metais diatômicos</td>
+                        <td>-101,5°C</td>
+                        <td>-34,04°C</td>
+                    </tr>
+
+                    <tr id="Ar">
+                        <td class="rosa">18</td>
+                        <td>Ar</td>
+                        <td>Argônio</td>
+                        <td>39,948</td>
+                        <td>Gases nobres</td>
+                        <td>-189°C</td>
+                        <td>-1860°C</td>
+                    </tr>
+
+                    <tr id="K">
+                        <td class="vermelho">19</td>
+                        <td>K</td>
+                        <td>Potássio</td>
+                        <td>39,098</td>
+                        <td>Metais alcalinos</td>
+                        <td>63°C</td>
+                        <td>758,9°C</td>
+                    </tr>
+
+                    <tr id="Ca">
+                        <td class="bege">20</td>
+                        <td>Ca</td>
+                        <td>Cálcio</td>
+                        <td>40,078</td>
+                        <td>Metais alcalinoterrosos</td>
+                        <td>841,9°C</td>
+                        <td>1484°C</td>
+                    </tr>
+
+                    <tr id="Sc">
+                        <td class="verde-claro">21</td>
+                        <td>Sc</td>
+                        <td>Escândio</td>
+                        <td>44,956</td>
+                        <td>Metais de transição</td>
+                        <td>1541°C</td>
+                        <td>2830°C</td>
+                    </tr>
+
+                    <tr id="Ti">
+                        <td class="verde-claro">22</td>
+                        <td>Ti</td>
+                        <td>Titânio</td>
+                        <td>47,867</td>
+                        <td>Metais de transição</td>
+                        <td>1668°C</td>
+                        <td>3287°C</td>
+                    </tr>
+
+                    <tr id="V">
+                        <td class="verde-claro">23</td>
+                        <td>V</td>
+                        <td>Vanádio</td>
+                        <td>50,942</td>
+                        <td>Metais de transição</td>
+                        <td>1910°C</td>
+                        <td>3407°C</td>
+                    </tr>
+
+                    <tr id="Cr">
+                        <td class="verde-claro">24</td>
+                        <td>Cr</td>
+                        <td>Crômio</td>
+                        <td>51,996</td>
+                        <td>Metais de transição</td>
+                        <td>1907°C</td>
+                        <td>2671°C</td>
+                    </tr>
+
+                    <tr id="Mn">
+                        <td class="verde-claro">25</td>
+                        <td>Mn</td>
+                        <td>Manganês</td>
+                        <td>54,938</td>
+                        <td>Metais de transição</td>
+                        <td>1246°C</td>
+                        <td>2061°C</td>
+                    </tr>
+
+                    <tr id="Fe">
+                        <td class="verde-claro">26</td>
+                        <td>Fe</td>
+                        <td>Ferro</td>
+                        <td>55,845</td>
+                        <td>Metais de transição</td>
+                        <td>1538°C</td>
+                        <td>2861°C</td>
+                    </tr>
+
+                    <tr id="Co">
+                        <td class="verde-claro">27</td>
+                        <td>Co</td>
+                        <td>Cobalto</td>
+                        <td>58,933</td>
+                        <td>Metais de transição</td>
+                        <td>1495°C</td>
+                        <td>2900°C</td>
+                    </tr>
+
+                    <tr id="Ni">
+                        <td class="verde-claro">28</td>
+                        <td>Ni</td>
+                        <td>Níquel</td>
+                        <td>58,693</td>
+                        <td>Metais de transição</td>
+                        <td>1455°C</td>
+                        <td>2913°C</td>
+                    </tr>
+
+                    <tr id="Cu">
+                        <td class="verde-claro">29</td>
+                        <td>Cu</td>
+                        <td>Cobre</td>
+                        <td>63,546</td>
+                        <td>Metais de transição</td>
+                        <td>1084,62°C</td>
+                        <td>2562°C</td>
+                    </tr>
+
+                    <tr id="Zn">
+                        <td class="verde-claro">30</td>
+                        <td>Zn</td>
+                        <td>Zinco</td>
+                        <td>65,38</td>
+                        <td>Metais de transição</td>
+                        <td>419,53°C</td>
+                        <td>906,9°C</td>
+                    </tr>
+
+                    <tr id="Ga">
+                        <td class="roxo">31</td>
+                        <td>Ga</td>
+                        <td>Gálio</td>
+                        <td>69,723</td>
+                        <td>Metais pós-transição</td>
+                        <td>29,76°C</td>
+                        <td>2204°C</td>
+                    </tr>
+
+                    <tr id="Ge">
+                        <td class="amarelo">32</td>
+                        <td>Ge</td>
+                        <td>Germânio</td>
+                        <td>72,63</td>
+                        <td>Semimetais</td>
+                        <td>938,25°C</td>
+                        <td>2028°C</td>
+                    </tr>
+
+                    <tr id="As">
+                        <td class="amarelo">33</td>
+                        <td>As</td>
+                        <td>Arsênio</td>
+                        <td>74,922</td>
+                        <td>Semimetais</td>
+                        <td>816,9°C</td>
+                        <td>614°C</td>
+                    </tr>
+
+                    <tr id="Se">
+                        <td class="verde-escuro">34</td>
+                        <td>Se</td>
+                        <td>Selênio</td>
+                        <td>78,971</td>
+                        <td>Não metais poliatômicos</td>
+                        <td>221°C</td>
+                        <td>685°C</td>
+                    </tr>
+
+                    <tr id="Br">
+                        <td class="laranja">35</td>
+                        <td>Br</td>
+                        <td>Bromo</td>
+                        <td>79,904</td>
+                        <td>Não metais diatômicos</td>
+                        <td>-7,35°C</td>
+                        <td>58,9°C</td>
+                    </tr>
+
+                    <tr id="Kr">
+                        <td class="rosa">36</td>
+                        <td>Kr</td>
+                        <td>Criptônio</td>
+                        <td>83,798</td>
+                        <td>Gases nobres</td>
+                        <td>-157,36°C</td>
+                        <td>153,22°C</td>
+                    </tr>
+
+                    <tr id="Rb">
+                        <td class="vermelho">37</td>
+                        <td>Rb</td>
+                        <td>Rubídio</td>
+                        <td>85,468</td>
+                        <td>Metais alcalinos</td>
+                        <td>39,310°C</td>
+                        <td>688°C</td>
+                    </tr>
+
+                    <tr id="Sr">
+                        <td class="bege">38</td>
+                        <td>Sr</td>
+                        <td>Estrôncio</td>
+                        <td>87,62</td>
+                        <td>Metais alcalinoterrosos</td>
+                        <td>776,9°C</td>
+                        <td>1382°C</td>
+                    </tr>
+
+                    <tr id="Y">
+                        <td class="verde-claro">39</td>
+                        <td>Y</td>
+                        <td>Ítrio</td>
+                        <td>88,906</td>
+                        <td>Metais de transição</td>
+                        <td>1526°C</td>
+                        <td>3345°C</td>
+                    </tr>
+
+                    <tr id="Zr">
+                        <td class="verde-claro">40</td>
+                        <td>Zr</td>
+                        <td>Zircônio</td>
+                        <td>91,224</td>
+                        <td>Metais de transição</td>
+                        <td>1855°C</td>
+                        <td>4409°C</td>
+                    </tr>
+
+                    <tr id="Nb">
+                        <td class="verde-claro">41</td>
+                        <td>Nb</td>
+                        <td>Nióbio</td>
+                        <td>92,906</td>
+                        <td>Metais de transição</td>
+                        <td>2477°C</td>
+                        <td>4927°C</td>
+                    </tr>
+
+                    <tr id="Mo">
+                        <td class="verde-claro">42</td>
+                        <td>Mo</td>
+                        <td>Molibdênio</td>
+                        <td>95,95</td>
+                        <td>Metais de transição</td>
+                        <td>2623°C</td>
+                        <td>4639°C</td>
+                    </tr>
+
+                    <tr id="Tc">
+                        <td class="verde-claro">43</td>
+                        <td>Tc</td>
+                        <td>Tecnécio</td>
+                        <td>[98]</td>
+                        <td>Metais de transição</td>
+                        <td>2204°C</td>
+                        <td>4265°C</td>
+                    </tr>
+
+                    <tr id="Ru">
+                        <td class="verde-claro">44</td>
+                        <td>Ru</td>
+                        <td>Rutênio</td>
+                        <td>101,07</td>
+                        <td>Metais de transição</td>
+                        <td>2334°C</td>
+                        <td>4150°C</td>
+                    </tr>
+
+                    <tr id="Rh">
+                        <td class="verde-claro">45</td>
+                        <td>Rh</td>
+                        <td>Ródio</td>
+                        <td>102,905</td>
+                        <td>Metais de transição</td>
+                        <td>1964°C</td>
+                        <td>3695°C</td>
+                    </tr>
+
+                    <tr id="Pd">
+                        <td class="verde-claro">46</td>
+                        <td>Pd</td>
+                        <td>Paládio</td>
+                        <td>106,42</td>
+                        <td>Metais de transição</td>
+                        <td>1554,90°C</td>
+                        <td>2963°C</td>
+                    </tr>
+
+                    <tr id="Ag">
+                        <td class="verde-claro">47</td>
+                        <td>Ag</td>
+                        <td>Prata</td>
+                        <td>107,87</td>
+                        <td>Metais de transição</td>
+                        <td>961,78°C</td>
+                        <td>2162°C</td>
+                    </tr>
+
+                    <tr id="Cd">
+                        <td class="verde-claro">48</td>
+                        <td>Cd</td>
+                        <td>Cádmio</td>
+                        <td>112,41</td>
+                        <td>Metais de transição</td>
+                        <td>321,07°C</td>
+                        <td>766,9°C</td>
+                    </tr>
+
+                    <tr id="In">
+                        <td class="roxo">49</td>
+                        <td>In</td>
+                        <td>Índio</td>
+                        <td>114,82</td>
+                        <td>Metais pós-transição</td>
+                        <td>156,6°C</td>
+                        <td>2072°C</td>
+                    </tr>
+
+                    <tr id="Sn">
+                        <td class="roxo">50</td>
+                        <td>Sn</td>
+                        <td>Estanho</td>
+                        <td>118,71</td>
+                        <td>Metais pós-transição</td>
+                        <td>231,93°C</td>
+                        <td>2602°C</td>
+                    </tr>
+
+                    <tr id="Sb">
+                        <td class="amarelo">51</td>
+                        <td>Sb</td>
+                        <td>Antimônio</td>
+                        <td>121,79</td>
+                        <td>Semimetais</td>
+                        <td>630,63°C5</td>
+                        <td>1587°C</td>
+                    </tr>
+
+                    <tr id="Te">
+                        <td class="amarelo">52</td>
+                        <td>Te</td>
+                        <td>Telúrio</td>
+                        <td>127,6</td>
+                        <td>Semimetais</td>
+                        <td>449,51°C</td>
+                        <td>987,9°C</td>
+                    </tr>
+
+                    <tr id="I">
+                        <td class="laranja">53</td>
+                        <td>I</td>
+                        <td>Iodo</td>
+                        <td>126,9</td>
+                        <td>Não metais diatômicos</td>
+                        <td>113,7°C</td>
+                        <td>184,3°C</td>
+                    </tr>
+
+                    <tr id="Xe">
+                        <td class="rosa">54</td>
+                        <td>Xe</td>
+                        <td>Xenônio</td>
+                        <td>131,29</td>
+                        <td>Gases nobres</td>
+                        <td>-111,8°C</td>
+                        <td>-108°C</td>
+                    </tr>
+
+                    <tr id="Cs">
+                        <td class="vermelho">55</td>
+                        <td>Cs</td>
+                        <td>Césio</td>
+                        <td>132,905</td>
+                        <td>Metais alcalinos</td>
+                        <td>28,440°C</td>
+                        <td>671°C</td>
+                    </tr>
+
+                    <tr id="Ba">
+                        <td class="bege">56</td>
+                        <td>Ba</td>
+                        <td>Bário</td>
+                        <td>137,33</td>
+                        <td>Metais alcalinoterrosos</td>
+                        <td>730°C</td>
+                        <td>1870°C</td>
+                    </tr>
+
+                    <tr id="La">
+                        <td class="azul-escuro">57</td>
+                        <td>La</td>
+                        <td>Lantânio</td>
+                        <td>138,91</td>
+                        <td>Lantanídeos</td>
+                        <td>919,9°C</td>
+                        <td>3464°C</td>
+                    </tr>
+
+                    <tr id="Ce">
+                        <td class="azul-escuro">58</td>
+                        <td>Ce</td>
+                        <td>Cério</td>
+                        <td>140,12</td>
+                        <td>Lantanídeos</td>
+                        <td>797,9°C</td>
+                        <td>3360°C</td>
+                    </tr>
+
+                    <tr id="Pr">
+                        <td class="azul-escuro">59</td>
+                        <td>Pr</td>
+                        <td>Praseodímio</td>
+                        <td>140,91</td>
+                        <td>Lantanídeos</td>
+                        <td>930,9°C</td>
+                        <td>3290°C</td>
+                    </tr>
+
+                    <tr id="Nd">
+                        <td class="azul-escuro">60</td>
+                        <td>Nd</td>
+                        <td>Neodímio</td>
+                        <td>144,24</td>
+                        <td>Lantanídeos</td>
+                        <td>1021°C</td>
+                        <td>3100°C</td>
+                    </tr>
+
+                    <tr id="Pm">
+                        <td class="azul-escuro">61</td>
+                        <td>Pm</td>
+                        <td>Promécio</td>
+                        <td>[145]</td>
+                        <td>Lantanídeos</td>
+                        <td>1100°C</td>
+                        <td>3000°C</td>
+                    </tr>
+
+                    <tr id="Sm">
+                        <td class="azul-escuro">62</td>
+                        <td>Sm</td>
+                        <td>Samário</td>
+                        <td>150,36</td>
+                        <td>Lantanídeos</td>
+                        <td>1072°C</td>
+                        <td>1803°C</td>
+                    </tr>
+
+                    <tr id="Eu">
+                        <td class="azul-escuro">63</td>
+                        <td>Eu</td>
+                        <td>Európio</td>
+                        <td>151,96</td>
+                        <td>Lantanídeos</td>
+                        <td>821,9°C</td>
+                        <td>1500°C</td>
+                    </tr>
+
+                    <tr id="Gd">
+                        <td class="azul-escuro">64</td>
+                        <td>Gd</td>
+                        <td>Gadolínio</td>
+                        <td>157,25</td>
+                        <td>Lantanídeos</td>
+                        <td>1313°C</td>
+                        <td>3250°C</td>
+                    </tr>
+
+                    <tr id="Tb">
+                        <td class="azul-escuro">65</td>
+                        <td>Tb</td>
+                        <td>Térbio</td>
+                        <td>158,93</td>
+                        <td>Lantanídeos</td>
+                        <td>1356°C</td>
+                        <td>3230°C</td>
+                    </tr>
+
+                    <tr id="Dy">
+                        <td class="azul-escuro">66</td>
+                        <td>Dy</td>
+                        <td>Disprósio</td>
+                        <td>162,5</td>
+                        <td>Lantanídeos</td>
+                        <td>1412°C</td>
+                        <td>2567°C</td>
+                    </tr>
+
+                    <tr id="Ho">
+                        <td class="azul-escuro">67</td>
+                        <td>Ho</td>
+                        <td>Hólmio</td>
+                        <td>164,93</td>
+                        <td>Lantanídeos</td>
+                        <td>1474°C</td>
+                        <td>2700°C</td>
+                    </tr>
+
+                    <tr id="Er">
+                        <td class="azul-escuro">68</td>
+                        <td>Er</td>
+                        <td>Érbio</td>
+                        <td>167,26</td>
+                        <td>Lantanídeos</td>
+                        <td>1545°C</td>
+                        <td>1950°C</td>
+                    </tr>
+
+                    <tr id="Tm">
+                        <td class="azul-escuro">69</td>
+                        <td>Tm</td>
+                        <td>Túlio</td>
+                        <td>168,93</td>
+                        <td>Lantanídeos</td>
+                        <td>1545°C</td>
+                        <td>1545°C</td>
+                    </tr>
+
+                    <tr id="Yb">
+                        <td class="azul-escuro">70</td>
+                        <td>Yb</td>
+                        <td>Itérbio</td>
+                        <td>173,05</td>
+                        <td>Lantanídeos</td>
+                        <td>818,9°C</td>
+                        <td>1196°C</td>
+                    </tr>
+
+                    <tr id="Lu">
+                        <td class="azul-escuro">71</td>
+                        <td>Lu</td>
+                        <td>Lutécio</td>
+                        <td>174,97</td>
+                        <td>Lantanídeos</td>
+                        <td>1663°C</td>
+                        <td>3402°C</td>
+                    </tr>
+
+                    <tr id="Hf">
+                        <td class="verde-claro">72</td>
+                        <td>Hf</td>
+                        <td>Háfnio</td>
+                        <td>178,49</td>
+                        <td>Metais de transição</td>
+                        <td>2233°C</td>
+                        <td>4603°C</td>
+                    </tr>
+
+                    <tr id="Ta">
+                        <td class="verde-claro">73</td>
+                        <td>Ta</td>
+                        <td>Tântalo</td>
+                        <td>180,948</td>
+                        <td>Metais de transição</td>
+                        <td>3422°C</td>
+                        <td>5555°C</td>
+                    </tr>
+
+                    <tr id="W">
+                        <td class="verde-claro">74</td>
+                        <td>W</td>
+                        <td>Tungstênio</td>
+                        <td>183,84</td>
+                        <td>Metais de transição</td>
+                        <td>3422°C</td>
+                        <td>5555°C</td>
+                    </tr>
+
+                    <tr id="Re">
+                        <td class="azul-claro">75</td>
+                        <td>Re</td>
+                        <td>Rênio</td>
+                        <td>186,207</td>
+                        <td>Metais de transição</td>
+                        <td>3186°C</td>
+                        <td>5596°C</td>
+                    </tr>
+
+                    <tr id="Os">
+                        <td class="verde-claro">76</td>
+                        <td>Os</td>
+                        <td>Ósmio</td>
+                        <td>190,23</td>
+                        <td>Metais de transição</td>
+                        <td>3033°C</td>
+                        <td>5012°C</td>
+                    </tr>
+
+                    <tr id="Ir">
+                        <td class="verde-claro">77</td>
+                        <td>Ir</td>
+                        <td>Irídio</td>
+                        <td>192,217</td>
+                        <td>Metais de transição</td>
+                        <td>2466°C</td>
+                        <td>4428°C</td>
+                    </tr>
+
+                    <tr id="Pt">
+                        <td class="verde-claro">78</td>
+                        <td>Pt</td>
+                        <td>Platina</td>
+                        <td>195,084</td>
+                        <td>Metais de transição</td>
+                        <td>1768,3°C</td>
+                        <td>3825°C</td>
+                    </tr>
+
+                    <tr id="Au">
+                        <td class="verde-claro">79</td>
+                        <td>Au</td>
+                        <td>Ouro</td>
+                        <td>196,97</td>
+                        <td>Metais de transição</td>
+                        <td>1064,18°C</td>
+                        <td>2856°C</td>
+                    </tr>
+
+                    <tr id="Hg">
+                        <td class="verde-claro">80</td>
+                        <td>Hg</td>
+                        <td>Mercúrio</td>
+                        <td>200,59</td>
+                        <td>Metais de transição</td>
+                        <td>-38,83°C</td>
+                        <td>356,73°C</td>
+                    </tr>
+
+                    <tr id="Tl">
+                        <td class="roxo">81</td>
+                        <td>Tl</td>
+                        <td>Tálio</td>
+                        <td>204,38</td>
+                        <td>Metais pós-transição</td>
+                        <td>304°C</td>
+                        <td>1473°C</td>
+                    </tr>
+
+                    <tr id="Pb">
+                        <td class="roxo">82</td>
+                        <td>Pb</td>
+                        <td>Chumbo</td>
+                        <td>207,2</td>
+                        <td>Metais pós-transição</td>
+                        <td>327,46°C</td>
+                        <td>1749°C</td>
+                    </tr>
+
+                    <tr id="Bi">
+                        <td class="roxo">83</td>
+                        <td>Bi</td>
+                        <td>Bismuto</td>
+                        <td>208,98</td>
+                        <td>Metais pós-transição</td>
+                        <td>271,3°C</td>
+                        <td>1564°C</td>
+                    </tr>
+
+                    <tr id="Po">
+                        <td class="roxo">84</td>
+                        <td>Po</td>
+                        <td>Polônio</td>
+                        <td>[209]</td>
+                        <td>Metais pós-transição</td>
+                        <td>255°C</td>
+                        <td>961,90°C</td>
+                    </tr>
+
+                    <tr id="At">
+                        <td class="amarelo">85</td>
+                        <td>At</td>
+                        <td>Ástato</td>
+                        <td>[210]</td>
+                        <td>Semimetais</td>
+                        <td>302°C</td>
+                        <td>350°C</td>
+                    </tr>
+
+                    <tr id="Rn">
+                        <td class="rosa">86</td>
+                        <td>Rn</td>
+                        <td>Radônio</td>
+                        <td>[222]</td>
+                        <td>Gases nobres</td>
+                        <td>-71,1°C</td>
+                        <td>-61,85°C</td>
+                    </tr>
+
+                    <tr id="Fr">
+                        <td class="vermelho">87</td>
+                        <td>Fr</td>
+                        <td>Frâncio</td>
+                        <td>[223]</td>
+                        <td>Metais alcalinos</td>
+                        <td>20,9°C</td>
+                        <td>650°C</td>
+                    </tr>
+
+                    <tr id="Ra">
+                        <td class="bege">88</td>
+                        <td>Ra</td>
+                        <td>Rádio</td>
+                        <td>[226]</td>
+                        <td>Metais alcalinoterrosos</td>
+                        <td>700°C</td>
+                        <td>1737°C</td>
+                    </tr>
+
+                    <tr id="Ac">
+                        <td class="azul-claro">89</td>
+                        <td>Ac</td>
+                        <td>Actínio</td>
+                        <td>[227]</td>
+                        <td>Actinídeos</td>
+                        <td>1050°C</td>
+                        <td>3200°C</td>
+                    </tr>
+
+                    <tr id="Th">
+                        <td class="azul-claro">90</td>
+                        <td>Th</td>
+                        <td>Tório</td>
+                        <td>232,04</td>
+                        <td>Actinídeos</td>
+                        <td>1750°C</td>
+                        <td>4820°C</td>
+                    </tr>
+
+                    <tr id="Pa">
+                        <td class="azul-claro">91</td>
+                        <td>Pa</td>
+                        <td>Protactínio</td>
+                        <td>231,04</td>
+                        <td>Actinídeos</td>
+                        <td>1572°C</td>
+                        <td>4000°C</td>
+                    </tr>
+
+                    <tr id="U">
+                        <td class="azul-claro">92</td>
+                        <td>U</td>
+                        <td>Urânio</td>
+                        <td>238,03</td>
+                        <td>Actinídeos</td>
+                        <td>1135°C</td>
+                        <td>3900°C</td>
+                    </tr>
+
+                    <tr id="Np">
+                        <td class="azul-claro">93</td>
+                        <td>Np</td>
+                        <td>Netúnio</td>
+                        <td>[237]</td>
+                        <td>Actinídeos</td>
+                        <td>644°C</td>
+                        <td>4000°C</td>
+                    </tr>
+
+                    <tr id="Pu">
+                        <td class="azul-claro">94</td>
+                        <td>Pu</td>
+                        <td>Plutônio</td>
+                        <td>[244]</td>
+                        <td>Actinídeos</td>
+                        <td>640°C</td>
+                        <td>3230°C</td>
+                    </tr>
+
+                    <tr id="Am">
+                        <td class="azul-claro">95</td>
+                        <td>Am</td>
+                        <td>Amerício</td>
+                        <td>[243]</td>
+                        <td>Actinídeos</td>
+                        <td>1176°C</td>
+                        <td>2011°C</td>
+                    </tr>
+
+                    <tr id="Cm">
+                        <td class="azul-claro">96</td>
+                        <td>Cm</td>
+                        <td>Cúrio</td>
+                        <td>[247]</td>
+                        <td>Actinídeos</td>
+                        <td>1345°C</td>
+                        <td>3140°C</td>
+                    </tr>
+
+                    <tr id="Bk">
+                        <td class="azul-claro">97</td>
+                        <td>Bk</td>
+                        <td>Berquélio</td>
+                        <td>[247]</td>
+                        <td>Actinídeos</td>
+                        <td>1050°C</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Cf">
+                        <td class="azul-claro">98</td>
+                        <td>Cf</td>
+                        <td>Califórnio</td>
+                        <td>[251]</td>
+                        <td>Actinídeos</td>
+                        <td>899,9°C</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Es">
+                        <td class="azul-claro">99</td>
+                        <td>Es</td>
+                        <td>Einstênio</td>
+                        <td>[252]</td>
+                        <td>Actinídeos</td>
+                        <td>859,9°C</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Fm">
+                        <td class="azul-claro">100</td>
+                        <td>Fm</td>
+                        <td>Férmio</td>
+                        <td>[257]</td>
+                        <td>Actinídeos</td>
+                        <td>1500°C</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Md">
+                        <td class="azul-claro">101</td>
+                        <td>Md</td>
+                        <td>Mendelévio</td>
+                        <td>[258]</td>
+                        <td>Actinídeos</td>
+                        <td>830°C</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="No">
+                        <td class="azul-claro">102</td>
+                        <td>No</td>
+                        <td>Nobélio</td>
+                        <td>[259]</td>
+                        <td>Actinídeos</td>
+                        <td>830°C</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Lr">
+                        <td class="azul-claro">103</td>
+                        <td>Lr</td>
+                        <td>Laurêncio</td>
+                        <td>[262]</td>
+                        <td>Actinídeos</td>
+                        <td>1600°C</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Rf">
+                        <td class="verde-claro">104</td>
+                        <td>Rf</td>
+                        <td>Rutherfórdio</td>
+                        <td>[267]</td>
+                        <td>Metais de transição</td>
+                        <td>1826,85°C</td>
+                        <td>5526,85°C</td>
+                    </tr>
+
+                    <tr id="Db">
+                        <td class="verde-claro">105</td>
+                        <td>Db</td>
+                        <td>Dúbnio</td>
+                        <td>[268]</td>
+                        <td>Metais de transição</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Sg">
+                        <td class="verde-claro">106</td>
+                        <td>Sg</td>
+                        <td>Seabórgio</td>
+                        <td>[269]</td>
+                        <td>Metais de transição</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Bh">
+                        <td class="verde-claro">107</td>
+                        <td></a>Bh</td>
+                        <td>Bóhrio</td>
+                        <td>[270]</td>
+                        <td>Metais de transição</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Hs">
+                        <td class="verde-claro">108</td>
+                        <td>Hs</td>
+                        <td>Hássio</td>
+                        <td>[277]</td>
+                        <td>Metais de transição</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Mt">
+                        <td class="cinza">109</td>
+                        <td>Mt</td>
+                        <td>Meitnério</td>
+                        <td>[278]</td>
+                        <td>Propriedades desconhecidas</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Ds">
+                        <td class="cinza">110</td>
+                        <td>Ds</td>
+                        <td>Darmstádtio</td>
+                        <td>[281]</td>
+                        <td>Propriedades desconhecidas</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Rg">
+                        <td class="cinza">111</td>
+                        <td>Rg</td>
+                        <td>Roentgênio</td>
+                        <td>[281]</td>
+                        <td>Propriedades desconhecidas</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Cn">
+                        <td class="verde-claro">112</td>
+                        <td>Cn</td>
+                        <td>Copemício</td>
+                        <td>[285]</td>
+                        <td>Metais de transição</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Nh">
+                        <td class="cinza">113</td>
+                        <td>Nh</td>
+                        <td>Nihônio</td>
+                        <td>[286]</td>
+                        <td>Propriedades desconhecidas</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Fl">
+                        <td class="cinza">114</td>
+                        <td>Fl</td>
+                        <td>Fleróvio</td>
+                        <td>[289]</td>
+                        <td>Propriedades desconhecidas</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Mc">
+                        <td class="cinza">115</td>
+                        <td>Mc</td>
+                        <td>Moscóvio</td>
+                        <td>[289]</td>
+                        <td>Propriedades desconhecidas</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Lv">
+                        <td class="cinza">116</td>
+                        <td>Lv</td>
+                        <td>Livermório</td>
+                        <td>[293]</td>
+                        <td>Propriedades desconhecidas</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Ts">
+                        <td class="cinza">117</td>
+                        <td>Ts</td>
+                        <td>Tenesso</td>
+                        <td>[294]</td>
+                        <td>Propriedades desconhecidas</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+
+                    <tr id="Og">
+                        <td class="cinza">118</td>
+                        <td>Og</td>
+                        <td>Oganessônio</td>
+                        <td>[294]</td>
+                        <td>Propriedades desconhecidas</td>
+                        <td>Desconhecido</td>
+                        <td>Desconhecido</td>
+                    </tr>
+                </tbody>
+            </button>
+
+            <div id="popup" class="popup">
+                <div class="popup-content">
+                    <span class="close" onclick="closePopup()">&times;</span>
+                    <h2 id="popup-title"></h2>
+                    <p id="popup-message"></p>
+                </div>
+            </div>
+            
+        </table>
+    </div>
 
     <footer>
         <p>&copy; 2024 Dicionário Químico. Todos os direitos reservados à Iago e Guilherme.</p>
     </footer>
 
+    <script src="botao.js"></script>
+    <script src="popup.js"></script>
+
+    <script>
+        // Obtém o botão
+        const backButton = document.getElementById('backButton');
+
+        // Função para voltar à página anterior
+        backButton.onclick = function () {
+            window.history.back();
+        };
+    </script>
 </body>
 
 </html>
