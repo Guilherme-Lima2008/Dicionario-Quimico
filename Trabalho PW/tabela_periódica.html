@@ -9,17 +9,18 @@
     <link rel="stylesheet" href="./style.css">
     <link rel="stylesheet" href="botao.css">
     <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="Barradepesquisa.css">
 
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
-          <div class="vw-plugin-top-wrapper"></div>
+            <div class="vw-plugin-top-wrapper"></div>
         </div>
-      </div>
-      <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
-      <script>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
-      </script>
+    </script>
 
     <title> Tabela Periódica </title>
 
@@ -150,6 +151,12 @@
             display: flex;
             align-items: center;
             justify-content: space-evenly;
+        }
+
+        .h2 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     </style>
 </head>
@@ -1415,14 +1422,20 @@
     </div>
 
     <div>
-        <table class="tabela-mais-informacoes">
+        <table class="tabela-mais-informacoes" id="periodicTable"> <br>
 
-                <caption>
-                    <h2>Tabela com mais informações dos elementos</h2>
-                </caption>
+            <div class="h2">
+                <h2>Tabela com mais informações dos elementos</h2>
+            </div> <br> 
 
-                <button id="backToTopBtn">⬆
-                    
+            <div class="h2">
+                <input type="text" id="search" placeholder="Pesquise um elemento..." onkeyup="searchElement()"
+                    class="search-input" class="search-container" class="h2">
+            </div>
+
+
+            <button id="backToTopBtn">⬆
+
                 <thead>
                     <tr class="cinza-claro">
                         <th>Nº Atômico</th>
@@ -1435,7 +1448,7 @@
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody id="elementsBody">
                     <tr id="H">
                         <td class="laranja" onclick="openPopup('info1')" class="popup-cell">1</td>
                         <td>H</td>
@@ -1457,7 +1470,7 @@
                     </tr>
 
                     <tr id="Li">
-                        <td class="vermelho">3</td>
+                        <td class="vermelho" onclick="openPopup('info3')" class="popup-cell">3</td>
                         <td>Li</td>
                         <td>Lítio</td>
                         <td>6,941</td>
@@ -1467,7 +1480,7 @@
                     </tr>
 
                     <tr id="Be">
-                        <td class="bege">4</td>
+                        <td class="bege" onclick="openPopup('info4')" class="popup-cell">4</td>
                         <td>Be</td>
                         <td>Berílio</td>
                         <td>9,0122</td>
@@ -1477,7 +1490,7 @@
                     </tr>
 
                     <tr id="B">
-                        <td class="amarelo">5</td>
+                        <td class="amarelo" onclick="openPopup('info5')" class="popup-cell">5</td>
                         <td>B</td>
                         <td>Boro</td>
                         <td>10,81</td>
@@ -2625,7 +2638,7 @@
                     <p id="popup-message"></p>
                 </div>
             </div>
-            
+
         </table>
     </div>
 
@@ -2635,6 +2648,7 @@
 
     <script src="botao.js"></script>
     <script src="popup.js"></script>
+    <script src="Barradepesquisa.js"></script>
 
     <script>
         // Obtém o botão
